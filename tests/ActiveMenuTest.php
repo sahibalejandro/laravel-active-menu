@@ -20,6 +20,30 @@ class ActiveMenuTest extends TestCase
         $this->assertEquals('custom-class', $activeMenu->active('active-menu', 'custom-class'));
     }
 
+    public function test_activate_parents()
+    {
+        $activeMenu = new ActiveMenu;
+
+        $activeMenu->activate('root.parent.child');
+
+        $this->assertEquals('active', $activeMenu->active('root'));
+        $this->assertEquals('active', $activeMenu->active('root.parent'));
+        $this->assertEquals('active', $activeMenu->active('root.parent.child'));
+    }
+
+    public function test_keys_do_not_repeat()
+    {
+        $activeMenu = new ActiveMenu;
+        $activeMenu->activate('root.parent');
+        $activeMenu->activate('root.parent.child');
+
+        $this->assertEquals([
+            'root.parent',
+            'root',
+            'root.parent.child',
+        ], $activeMenu->getKeys());
+    }
+
     public function test_blade_directives()
     {
         $compiler = app(BladeCompiler::class);
