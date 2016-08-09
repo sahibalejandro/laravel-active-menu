@@ -1,0 +1,25 @@
+{
+    "name": "sahibalejandro/laravel-active-menu",
+    "description": "Blade directives to manage menu states in a clean an easy way.",
+    "require-dev": {
+        "laravel/laravel": "~5.1",
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sahib\\ActiveMenu\\": "src"
+        },
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sahib J. Leo",
+            "email": "sahib@sahib.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
