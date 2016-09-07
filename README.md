@@ -15,13 +15,13 @@ composer require sahibalejandro/laravel-active-menu
 
 Call `@activate(...)` to specify the activated menu:
 
-```
+```blade
 @activate('security_settings')
 ```
 
 Now call `@active(...)` directive to know if a specified menu is active:
 
-```
+```blade
 <ul>
     <li>
         <a href="/settings">Settings</a>
@@ -36,7 +36,7 @@ Now call `@active(...)` directive to know if a specified menu is active:
 
 This directive will print the string `active` if the given menu is activated. The example above will result on the following HTML:
 
-```
+```html
 <ul>
     <li>
         <a href="/settings">Settings</a>
@@ -56,13 +56,13 @@ Now just add a `li.active a { ... }` styles to your CSS and you're ready.
 
 Use dot-notation to activate the menu cascade up, for example, using this directive:
 
-```
+```blade
 @activate('settings.security')
 ```
 
 This will activate `settings` and `settings.security`, so the following directives will print the string `active`:
 
-```
+```blade
 @active('settings')
 @active('settings.security')
 ```
@@ -71,7 +71,7 @@ This will activate `settings` and `settings.security`, so the following directiv
 
 You can change the class name passing it as a second parameter:
 
-```
+```blade
 @active('user.account', 'link-active')
 ```
 
