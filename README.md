@@ -1,4 +1,8 @@
 # Laravel Active Menu
+[![Build Status](https://travis-ci.org/sahibalejandro/laravel-active-menu.svg?branch=master)](https://travis-ci.org/sahibalejandro/laravel-active-menu)
+[![Latest Stable Version](https://poser.pugx.org/sahibalejandro/laravel-active-menu/v/stable)](https://packagist.org/packages/sahibalejandro/laravel-active-menu)
+[![Total Downloads](https://poser.pugx.org/sahibalejandro/laravel-active-menu/downloads)](https://packagist.org/packages/sahibalejandro/laravel-active-menu)
+[![License](https://poser.pugx.org/sahibalejandro/laravel-active-menu/license)](https://packagist.org/packages/sahibalejandro/laravel-active-menu)
 
 Blade directives for Laravel 5.1+ to manage menu states in a clean an easy way.
 
